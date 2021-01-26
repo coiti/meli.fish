@@ -95,8 +95,8 @@ CAVEATS
             case _
                 if echo "$value" | egrep --ignore-case --quiet '^(delete|get|head|options|patch|post|put)$'
                     if test -n "$method"
-                        echo Too many HTTP verbs. &>2
-                        _meli_usage &>2
+                        echo Too many HTTP verbs. >&2
+                        _meli_usage >&2
                         return 1
                     end
 
@@ -125,7 +125,7 @@ CAVEATS
 
     if test -z "$url"
         echo An URL is required. >&2
-        _meli_usage &>2
+        _meli_usage >&2
         return 1
     end
 
