@@ -46,6 +46,6 @@ meli get sites/MLU
 meli head /
 meli options users
 meli put "items/$item_id" status=closed
-echo '{"title": "Hello World", price: 14.50}' | meli put "items/$item_id"
+echo '{"title": "Hello World", "price": 14.50}' | meli put "items/$item_id"
 meli post items <item.json
 ```
